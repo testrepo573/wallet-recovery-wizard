@@ -11,15 +11,6 @@ The application currently offers the following recoveries:
 
 Please see the [releases page](https://github.com/BitGo/wallet-recovery-wizard/releases).
 
-## Development Setup
-```shell
-git clone git@github.com:BitGo/wallet-recovery-wizard.git # install the application
-cd wallet-recovery-wizard
-brew install openssl # required to compile native libraries
-ln -s /usr/local/opt/openssl/include/openssl /usr/local/include # required to compile native libraries
-npm install
-npm run start # run a development server and start the app
-```
 ## Seed CX Recovery Instructions
 In Wallet Recovery Wizard select the Non-BitGo Recoveries option. Box A is the encrypted user key, Box B is the encrypted backup key, Box C is the BitGo xpub. 
 Use the below python function to encrypt the user and backup private keys. 
