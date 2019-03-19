@@ -11,7 +11,7 @@ The application currently offers the following recoveries:
 
 Please see the [releases page](https://github.com/testrepo573/wallet-recovery-wizard/releases).
 
-## Seed CX Recovery Instructions
+## Recovery Instructions
 In Wallet Recovery Wizard select the Non-BitGo Recoveries option. Box A is the encrypted user key, Box B is the encrypted backup key, Box C is the BitGo xpub. 
 Use the below python function to encrypt the user and backup private keys. 
 ```
