@@ -20,3 +20,15 @@ ln -s /usr/local/opt/openssl/include/openssl /usr/local/include # required to co
 npm install
 npm run start # run a development server and start the app
 ```
+## Seed CX Recovery Instructions
+In Wallet Recovery Wizard select the Non-BitGo Recoveries option. Box A is the encrypted user key, Box B is the encrypted backup key, Box C is the BitGo xpub. 
+Use the below python function to encrypt the user and backup private keys. 
+```
+def encrypt_key(password,key,api_key):
+    header = {f'Authorization': "Bearer {api_key}",
+             'Content-Type':'application/json'}
+    payload = {'input': key, 
+               'password': password}
+    r = requests.post("http://localhost:3080/api/v2/encrypt",headers=header,data=json.dumps(payload))
+    return r.json()
+```    
